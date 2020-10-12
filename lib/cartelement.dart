@@ -95,6 +95,7 @@ class _CartElementState extends State<CartElement> {
                   child: Counter(
                     initialValue: model.qty,
                     minValue: 0,
+                    color: Color.fromRGBO(209, 12, 22, 1),
                     maxValue: double.infinity,
                     step: 1,
                     decimalPlaces: 0,
