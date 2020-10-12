@@ -65,6 +65,7 @@ class _CediCartState extends State<CediCart> {
                     margin: EdgeInsets.only(top: 20, left: 20),
                     semanticContainer: true,
                     elevation: 15,
+                    color: Color.fromRGBO(209, 12, 22, 1),
                     shadowColor: Colors.redAccent,
                     clipBehavior: Clip.antiAliasWithSaveLayer,
                     borderOnForeground: true,

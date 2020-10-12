@@ -22,11 +22,11 @@ class _CartElementState extends State<CartElement> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 220,
+      height: 200,
       child: Row(
         children: [
           Card(
-            margin: EdgeInsets.only(top: 10, left: 20),
+            margin: EdgeInsets.only(top: 20, left: 20),
             semanticContainer: true,
             elevation: 15,
             clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -65,13 +65,10 @@ class _CartElementState extends State<CartElement> {
                 ),
                 Container(
                   height: 20,
-                  margin: EdgeInsets.only(left: 20, top: 10, bottom: 30),
+                  margin: EdgeInsets.only(left: 30, top: 10, bottom: 30),
                   child: Text(
                     model.shipping,
-                    style: TextStyle(
-                        fontFamily: 'Gilroy',
-                        fontSize: 10,
-                        fontWeight: FontWeight.w400),
+                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400),
                   ),
                 ),
                 Container(
@@ -83,7 +80,7 @@ class _CartElementState extends State<CartElement> {
                     color: Color.fromRGBO(255, 255, 255, 1),
                     maxValue: double.infinity,
                     step: 1,
-                    elevation: 20,
+                    elevation: 0,
                     decimalPlaces: 0,
                     onChanged: (value) {
                       // get the latest value from here
@@ -100,7 +97,7 @@ class _CartElementState extends State<CartElement> {
             children: [
               Container(
                 height: 30,
-                margin: EdgeInsets.only(left: 10, top: 50),
+                margin: EdgeInsets.only(left: 10, top: 50, bottom: 60),
                 child: Text(
                   model.price,
                   style: TextStyle(
