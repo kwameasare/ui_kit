@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ui_kit/cedicart.dart';
 import 'package:ui_kit/cedishop.dart';
 import 'package:ui_kit/home.dart';
 import 'package:ui_kit/user_card.dart';
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       theme: ThemeData(backgroundColor: Colors.white, fontFamily: 'Josefin'),
       debugShowCheckedModeBanner: false,
-      home: Account(),
+      home: CediCart(),
     );
   }
 }
