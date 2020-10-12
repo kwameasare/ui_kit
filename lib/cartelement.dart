@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_counter/flutter_counter.dart';
+
 
 import 'cedicartmod.dart';
+import 'counter.dart';
 
 class CartElement extends StatefulWidget {
   final Cartmod_model cedicart_mod;
