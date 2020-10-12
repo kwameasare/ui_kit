@@ -84,7 +84,9 @@ class Counter extends StatelessWidget {
             height: buttonSize,
             child: FloatingActionButton(
               onPressed: _decrementCounter,
-              elevation: 2,
+              elevation: 0,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(4)),
               tooltip: 'Decrement',
               child: Icon(Icons.remove),
               backgroundColor: color,
@@ -92,6 +94,7 @@ class Counter extends StatelessWidget {
           ),
           new Container(
             padding: EdgeInsets.all(4.0),
+            margin: EdgeInsets.symmetric(horizontal: 10),
             child: new Text(
                 '${num.parse((selectedValue).toStringAsFixed(decimalPlaces))}',
                 style: textStyle),
@@ -101,8 +104,10 @@ class Counter extends StatelessWidget {
             height: buttonSize,
             child: FloatingActionButton(
               onPressed: _incrementCounter,
-              elevation: 2,
-              tooltip: 'Increment',
+              elevation: 0,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(4)),
+              tooltip: 'Add more',
               child: Icon(Icons.add),
               backgroundColor: color,
             ),

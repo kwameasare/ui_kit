@@ -63,35 +63,20 @@ class _CartElementState extends State<CartElement> {
                         fontWeight: FontWeight.w500),
                   ),
                 ),
-                Row(
-                  children: [
-                    Container(
-                      height: 20,
-                      margin: EdgeInsets.only(left: 20, top: 10),
-                      child: Text(
-                        model.shipping,
-                        style: TextStyle(
-                            fontFamily: 'Gilroy',
-                            fontSize: 10,
-                            fontWeight: FontWeight.w400),
-                      ),
-                    ),
-                    Container(
-                      height: 50,
-                      margin: EdgeInsets.only(left: 10, top: 10),
-                      child: Text(
-                        model.price,
-                        style: TextStyle(
-                            fontFamily: 'Gilroy',
-                            fontSize: 18,
-                            fontWeight: FontWeight.w400),
-                      ),
-                    ),
-                  ],
+                Container(
+                  height: 20,
+                  margin: EdgeInsets.only(left: 20, top: 10, bottom: 30),
+                  child: Text(
+                    model.shipping,
+                    style: TextStyle(
+                        fontFamily: 'Gilroy',
+                        fontSize: 10,
+                        fontWeight: FontWeight.w400),
+                  ),
                 ),
                 Container(
                   height: 50,
-                  margin: EdgeInsets.only(left: 10, top: 10),
+                  margin: EdgeInsets.only(left: 20, top: 10),
                   child: Counter(
                     initialValue: model.qty,
                     minValue: 0,
