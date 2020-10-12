@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_kit/appdata.dart';
 
 import 'cedicartmod.dart';
 import 'counter.dart';
@@ -22,13 +23,13 @@ class _CartElementState extends State<CartElement> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
+      height: 150,
       child: Row(
         children: [
           Card(
             margin: EdgeInsets.only(top: 20, left: 20),
             semanticContainer: true,
-            elevation: 15,
+            elevation: 20,
             clipBehavior: Clip.antiAliasWithSaveLayer,
             borderOnForeground: true,
             shape:
@@ -40,7 +41,7 @@ class _CartElementState extends State<CartElement> {
               },
               child: Container(
                   width: 80,
-                  height: 140,
+                  height: 100,
                   child: Image.asset(
                     model.image,
                     fit: BoxFit.cover,
@@ -65,15 +66,20 @@ class _CartElementState extends State<CartElement> {
                 ),
                 Container(
                   height: 20,
-                  margin: EdgeInsets.only(left: 30, top: 10, bottom: 30),
+                  margin: EdgeInsets.only(
+                    left: 30,
+                    top: 10,
+                  ),
                   child: Text(
                     model.shipping,
                     style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400),
                   ),
                 ),
                 Container(
-                  height: 50,
-                  margin: EdgeInsets.only(left: 20, top: 10),
+                  height: 40,
+                  margin: EdgeInsets.only(
+                    left: 20,
+                  ),
                   child: Counter(
                     initialValue: model.qty,
                     minValue: 0,
@@ -97,7 +103,7 @@ class _CartElementState extends State<CartElement> {
             children: [
               Container(
                 height: 30,
-                margin: EdgeInsets.only(left: 10, top: 50, bottom: 60),
+                margin: EdgeInsets.only(left: 10, top: 50, bottom: 10),
                 child: Text(
                   model.price,
                   style: TextStyle(
@@ -111,7 +117,9 @@ class _CartElementState extends State<CartElement> {
                   onChanged: (bool value) {
                     setState(() {
                       model.checked = value;
+                      AppData.selectedCart.add(model);
                     });
+                    print(AppData.selectedCart.length);
                   },
                   value: model.checked,
                   activeColor: Color.fromRGBO(209, 12, 22, 1),
