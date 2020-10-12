@@ -14,6 +14,27 @@ class _CediCartState extends State<CediCart> {
     return Scaffold(
       body: Stack(
         children: [
+          Positioned(
+            bottom: 50,
+            child: Container(
+              width: double.infinity,
+              height: 60,
+              color: Colors.white,
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        child: Text(
+                          'Selected Items ' + '(' + '3' + ')',
+                        ),
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ),
+          ),
           Container(
 
               // margin: EdgeInsets.only(top: ww / 60, left: ww / 50),
