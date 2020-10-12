@@ -50,29 +50,31 @@ class _CediCartState extends State<CediCart> {
                             left: 0,
                             top: 0,
                             child: Container(
-                              margin: EdgeInsets.only(left: 15, top: 15),
-                              child: Text(
-                                'Selected Items ' +
-                                    '(' +
-                                    AppData.numsel.toString() +
-                                    ')',
-                              ),
-                            ),
+                                margin: EdgeInsets.only(left: 15, top: 15),
+                                child: FutureBuilder(
+                                  future: someFutureStringFunction(),
+                                  builder: (context, snapshot) {
+                                    if (snapshot.hasData) {
+                                      return Text(
+                                        'Selected Items ' +
+                                            '(' +
+                                            snapshot.data +
+                                            ')',
+                                      );
+                                    } else {
+                                      return Text('Loading...');
+                                    }
+                                  },
+                                )),
                           ),
                           Positioned(
                             right: 0,
                             top: 0,
                             child: Container(
                               margin: EdgeInsets.only(right: 15, top: 15),
-                              child: FutureBuilder(
-                                future: someFutureStringFunction(),
-                                builder: (context, snapshot) {
-                                  return Text(
-                                    'Total: ' + 'USD ' + '3652.36',
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold),
-                                  );
-                                },
+                              child: Text(
+                                'Total: ' + 'USD ' + '3652.36',
+                                style: TextStyle(fontWeight: FontWeight.bold),
                               ),
                             ),
                           )

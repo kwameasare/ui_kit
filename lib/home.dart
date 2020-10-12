@@ -81,7 +81,38 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     var ww = MediaQuery.of(context).size.width;
     return Scaffold(
       key: _scaffoldKey,
-
+      drawer: Drawer(
+        //     Side menu(Drawer)
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: const <Widget>[
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.redAccent,
+              ),
+              child: Text(
+                'Tech Space',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.all_inclusive),
+              title: Text('Infinite Feature'),
+            ),
+            ListTile(
+              leading: Icon(Icons.watch_later),
+              title: Text('Infinite activity'),
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text('Settings'),
+            ),
+          ],
+        ),
+      ),
       body: Stack(
         children: [
           SizedBox.expand(

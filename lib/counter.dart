@@ -72,10 +72,8 @@ class Counter extends StatelessWidget {
   Widget build(BuildContext context) {
     final ThemeData themeData = Theme.of(context);
     color = color ?? themeData.accentColor;
-    textStyle = textStyle ??
-        new TextStyle(
-          fontSize: 20.0,
-        );
+    textStyle =
+        textStyle ?? new TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold);
 
     return new Container(
       padding: new EdgeInsets.all(4.0),
