@@ -80,9 +80,10 @@ class _CartElementState extends State<CartElement> {
                   child: Counter(
                     initialValue: model.qty,
                     minValue: 0,
-                    color: Color.fromRGBO(209, 12, 22, 1),
+                    color: Color.fromRGBO(255, 255, 255, 1),
                     maxValue: double.infinity,
                     step: 1,
+                    elevation: 20,
                     decimalPlaces: 0,
                     onChanged: (value) {
                       // get the latest value from here

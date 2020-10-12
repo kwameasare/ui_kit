@@ -16,6 +16,7 @@ class Counter extends StatelessWidget {
     @required this.maxValue,
     @required this.onChanged,
     @required this.decimalPlaces,
+    this.elevation,
     this.color,
     this.textStyle,
     this.step = 1,
@@ -31,6 +32,9 @@ class Counter extends StatelessWidget {
 
   ///min value user can pick
   final num minValue;
+
+  ///min value user can pick
+  final double elevation;
 
   ///max value user can pick
   final num maxValue;
@@ -84,17 +88,21 @@ class Counter extends StatelessWidget {
             height: buttonSize,
             child: FloatingActionButton(
               onPressed: _decrementCounter,
-              elevation: 0,
+              elevation: elevation,
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(4)),
-              tooltip: 'Decrement',
-              child: Icon(Icons.remove),
+                  borderRadius: BorderRadius.circular(6)),
+              tooltip: 'Remove one',
+              child: Icon(
+                Icons.remove,
+                size: 18,
+                color: Colors.black,
+              ),
               backgroundColor: color,
             ),
           ),
           new Container(
             padding: EdgeInsets.all(4.0),
-            margin: EdgeInsets.symmetric(horizontal: 10),
+            margin: EdgeInsets.symmetric(horizontal: 15),
             child: new Text(
                 '${num.parse((selectedValue).toStringAsFixed(decimalPlaces))}',
                 style: textStyle),
@@ -104,11 +112,15 @@ class Counter extends StatelessWidget {
             height: buttonSize,
             child: FloatingActionButton(
               onPressed: _incrementCounter,
-              elevation: 0,
+              elevation: elevation,
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(4)),
-              tooltip: 'Add more',
-              child: Icon(Icons.add),
+                  borderRadius: BorderRadius.circular(6)),
+              tooltip: 'Add one',
+              child: Icon(
+                Icons.add,
+                size: 18,
+                color: Colors.black,
+              ),
               backgroundColor: color,
             ),
           ),
