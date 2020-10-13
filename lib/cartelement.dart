@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:ui_kit/appdata.dart';
 
+
 import 'cedicartmod.dart';
 import 'counter.dart';
 
 class CartElement extends StatefulWidget {
-  final Cartmod_model cedicart_mod;
+  final CartModel cedicart_mod;
   CartElement({Key key, this.cedicart_mod}) : super(key: key);
 
   @override
@@ -13,7 +14,7 @@ class CartElement extends StatefulWidget {
 }
 
 class _CartElementState extends State<CartElement> {
-  Cartmod_model model;
+  CartModel model;
   @override
   void initState() {
     model = widget.cedicart_mod;

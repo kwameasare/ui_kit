@@ -1,11 +1,11 @@
-class Cartmod_model {
+class CartModel {
   int qty;
   String ttl;
   String shipping;
   String image;
   String price;
   bool checked;
-  Cartmod_model(
+  CartModel(
       {this.qty,
       this.ttl,
       this.price,

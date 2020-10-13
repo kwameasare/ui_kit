@@ -1,32 +1,32 @@
-import 'package:ui_kit/cedicartmod.dart';
+import 'cedicartmod.dart';
 
 class AppData {
-  static List<Cartmod_model> selectedCart = [];
+  static List<CartModel> selectedCart = [];
 
   static int numsel = selectedCart.length;
-  static List<Cartmod_model> cedicart = [
-    Cartmod_model(
+  static List<CartModel> cedicart = [
+    CartModel(
         image: 'images/6.jpg',
         price: 'Ghc 560',
         ttl: 'My good product',
         checked: false,
         qty: 2,
         shipping: 'DHL 3 day shipping'),
-    Cartmod_model(
+    CartModel(
         image: 'images/6.jpg',
         price: 'Ghc 560',
         ttl: 'My good product',
         checked: false,
         qty: 1,
         shipping: 'DHL 3 day shipping'),
-    Cartmod_model(
+    CartModel(
         image: 'images/6.jpg',
         price: 'Ghc 560',
         ttl: 'My good product',
         checked: false,
         qty: 3,
         shipping: 'DHL 3 day shipping'),
-    Cartmod_model(
+    CartModel(
         image: 'images/6.jpg',
         price: 'Ghc 560',
         ttl: 'My good product',
