@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
+import 'package:ui_kit/drawer.dart';
 import 'package:ui_kit/myaccount.dart';
 import 'package:ui_kit/chat.dart';
 import 'package:ui_kit/explore.dart';
@@ -38,6 +39,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       exploreController;
   PageController _pageController;
   int menuOpen;
+  int _isDrawerOpen = 0;
   @override
   void initState() {
     super.initState();
@@ -81,8 +83,20 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     var ww = MediaQuery.of(context).size.width;
     return Scaffold(
       key: _scaffoldKey,
-      drawer: Drawer(
-        //     Side menu(Drawer)
+      drawer: CustomDrawer(
+        callback: (isOpen) {
+          print("isOpen ${isOpen}");
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            setState(() {
+              _isDrawerOpen = isOpen ? 1 : 0;
+
+              if (_isDrawerOpen == 0) {
+                menuController.animateTo(0.0);
+              }
+              ;
+            });
+          });
+        },
         child: ListView(
           padding: EdgeInsets.zero,
           children: const <Widget>[
@@ -135,17 +149,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               child: InkWell(
                 customBorder: CircleBorder(),
                 onTap: () {
-                  if (menuOpen == 0) {
-                    menuController.animateTo(
-                      0.5,
-                    );
-                    menuOpen = 1;
-                  } else {
-                    menuController.animateTo(
-                      0.0,
-                    );
-                    menuOpen = 0;
-                  }
+                  menuController.animateTo(
+                    0.5,
+                  );
+                  _scaffoldKey.currentState.openDrawer();
                 },
                 child: Container(
                   height: 50,

@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       theme: ThemeData(backgroundColor: Colors.white, fontFamily: 'Josefin'),
       debugShowCheckedModeBanner: false,
-      home: CediCart(),
+      home: HomePage(),
     );
   }
 }
