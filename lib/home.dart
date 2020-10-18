@@ -83,6 +83,45 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     var ww = MediaQuery.of(context).size.width;
     return Scaffold(
       key: _scaffoldKey,
+
+      appBar: PreferredSize(
+        preferredSize: Size(ww, 40),
+        child: Stack(
+          children: [
+            Positioned(
+                bottom: -10,
+                right: 15,
+                child: InkWell(
+                  customBorder: CircleBorder(),
+                  onTap: () {
+                    menuController.animateTo(
+                      0.5,
+                    );
+                    _scaffoldKey.currentState.openDrawer();
+                  },
+                  child: Container(
+                    height: 50,
+                    width: 50,
+                    padding: EdgeInsets.all(8),
+                    child: Lottie.asset(
+                      'assets/menu.json',
+                      height: 24,
+                      width: 24,
+                      controller: menuController,
+                      //fit: BoxFit.fitHeight
+                    ),
+                  ),
+                )),
+            Container(
+              alignment: Alignment.bottomCenter,
+              child: Icon(
+                Icons.all_inclusive,
+                color: Color(0xFF000000),
+              ),
+            ),
+          ],
+        ),
+      ),
       drawer: CustomDrawer(
         callback: (isOpen) {
           print("isOpen ${isOpen}");
@@ -160,30 +199,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ],
             ),
           ),
-          Positioned(
-              top: 40,
-              right: 15,
-              child: InkWell(
-                customBorder: CircleBorder(),
-                onTap: () {
-                  menuController.animateTo(
-                    0.5,
-                  );
-                  _scaffoldKey.currentState.openDrawer();
-                },
-                child: Container(
-                  height: 50,
-                  width: 50,
-                  padding: EdgeInsets.all(8),
-                  child: Lottie.asset(
-                    'assets/menu.json',
-                    height: 24,
-                    width: 24,
-                    controller: menuController,
-                    //fit: BoxFit.fitHeight
-                  ),
-                ),
-              )),
         ],
       ),
       //
@@ -209,7 +224,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Color(0xFFE63426),
+        backgroundColor: Color(0xFFFF1744),
         child: Icon(Icons.add),
         elevation: 30,
         mini: true,
