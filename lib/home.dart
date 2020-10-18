@@ -99,30 +99,47 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         },
         child: ListView(
           padding: EdgeInsets.zero,
-          children: const <Widget>[
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.redAccent,
-              ),
-              child: Text(
-                'Tech Space',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
+          children: <Widget>[
+            UserAccountsDrawerHeader(
+                decoration: BoxDecoration(
+                  color: Color.fromRGBO(255, 255, 255, 1),
+// borderRadius: BorderRadius.circular(2),
                 ),
-              ),
-            ),
+                accountEmail: Text(
+                  "eugenedannyuriel@gmail.com",
+                  style: TextStyle(
+                    color: Colors.black,
+                  ),
+                ),
+                accountName: Text(
+                  "UI catalogue",
+                  style: TextStyle(
+                    color: Colors.black,
+                  ),
+                ),
+                currentAccountPicture: InkWell(
+                  child: CircleAvatar(
+                      backgroundColor: Colors.white,
+                      child: Icon(Icons.whatshot, color: Colors.black)
+
+// child: Image.asset('assets/images/bed.gif'),
+
+                      ),
+                )),
             ListTile(
               leading: Icon(Icons.all_inclusive),
-              title: Text('Infinite Feature'),
+              title: Text('Infinite Commerce'),
+              onTap: () {},
             ),
             ListTile(
               leading: Icon(Icons.watch_later),
-              title: Text('Infinite activity'),
+              title: Text('Timely Ride'),
+              onTap: () {},
             ),
             ListTile(
               leading: Icon(Icons.settings),
-              title: Text('Settings'),
+              title: Text('Social Gears'),
+              onTap: () {},
             ),
           ],
         ),
