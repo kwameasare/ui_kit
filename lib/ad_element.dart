@@ -25,8 +25,9 @@ class _AdElementState extends State<AdElement> {
     var ww = MediaQuery.of(context).size.width;
     return Container(
       height: 220,
+      width: ww * .8,
       child: Card(
-        margin: EdgeInsets.only(right: 20, left: 20),
+        margin: EdgeInsets.only(bottom: 40, left: 5, right: 5),
         semanticContainer: true,
         elevation: 20,
         clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -38,13 +39,12 @@ class _AdElementState extends State<AdElement> {
             print('Card tapped.');
           },
           child: Container(
-              width: ww,
-              height: 180,
+              width: ww * .8,
+              height: 220,
               child: Stack(
                 children: [
                   Image.asset(
                     model.image,
-                    fit: BoxFit.cover,
                   ),
                 ],
               )),

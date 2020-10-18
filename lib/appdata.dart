@@ -38,88 +38,69 @@ class AppData {
 
   static List<AdMod> adList = [
     AdMod(
-        image: 'images/6.jpg',
-        price: 'Ghc 560',
-        ttl: 'My good product',
-
-       ),
-    AdMod(
-      image: 'images/6.jpg',
+      image: 'images/ad1.png',
       price: 'Ghc 560',
       ttl: 'My good product',
-
     ),
     AdMod(
-      image: 'images/6.jpg',
+      image: 'images/ad2.png',
       price: 'Ghc 560',
       ttl: 'My good product',
-
     ),
     AdMod(
-      image: 'images/6.jpg',
+      image: 'images/ad3.png',
       price: 'Ghc 560',
       ttl: 'My good product',
-
-    ), AdMod(
-      image: 'images/6.jpg',
-      price: 'Ghc 560',
-      ttl: 'My good product',
-
     ),
     AdMod(
-      image: 'images/6.jpg',
+      image: 'images/ad4.png',
       price: 'Ghc 560',
       ttl: 'My good product',
-
     ),
     AdMod(
-      image: 'images/6.jpg',
+      image: 'images/ad2.png',
       price: 'Ghc 560',
       ttl: 'My good product',
-
     ),
     AdMod(
-      image: 'images/6.jpg',
+      image: 'images/ad1.png',
       price: 'Ghc 560',
       ttl: 'My good product',
-
     ),
     AdMod(
-      image: 'images/6.jpg',
+      image: 'images/ad2.png',
       price: 'Ghc 560',
       ttl: 'My good product',
-
     ),
     AdMod(
-      image: 'images/6.jpg',
+      image: 'images/ad4.png',
       price: 'Ghc 560',
       ttl: 'My good product',
-
     ),
     AdMod(
-      image: 'images/6.jpg',
+      image: 'images/ad3.png',
       price: 'Ghc 560',
       ttl: 'My good product',
-
-    ), AdMod(
-      image: 'images/6.jpg',
-      price: 'Ghc 560',
-      ttl: 'My good product',
-
     ),
     AdMod(
-      image: 'images/6.jpg',
+      image: 'images/ad1.png',
       price: 'Ghc 560',
       ttl: 'My good product',
-
     ),
-
-
-
-
+    AdMod(
+      image: 'images/ad2.png',
+      price: 'Ghc 560',
+      ttl: 'My good product',
+    ),
+    AdMod(
+      image: 'images/ad3.png',
+      price: 'Ghc 560',
+      ttl: 'My good product',
+    ),
+    AdMod(
+      image: 'images/ad4.png',
+      price: 'Ghc 560',
+      ttl: 'My good product',
+    ),
   ];
-
-
-
-
 }

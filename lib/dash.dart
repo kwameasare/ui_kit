@@ -52,10 +52,10 @@ class _DashState extends State<Dash> {
               ],
             )),
         Container(
-            margin: EdgeInsets.only(top: 20),
+            margin: EdgeInsets.only(top: 30),
             child: CarouselSlider(
               options: CarouselOptions(
-                height: 200.0,
+                height: 220.0,
                 autoPlay: true,
                 autoPlayInterval: Duration(seconds: 3),
                 autoPlayAnimationDuration: Duration(milliseconds: 800),
