@@ -1,3 +1,4 @@
+import 'ad_mod.dart';
 import 'cedicartmod.dart';
 
 class AppData {
@@ -34,4 +35,91 @@ class AppData {
         qty: 4,
         shipping: 'DHL 3 day shipping'),
   ];
+
+  static List<AdMod> adList = [
+    AdMod(
+        image: 'images/6.jpg',
+        price: 'Ghc 560',
+        ttl: 'My good product',
+
+       ),
+    AdMod(
+      image: 'images/6.jpg',
+      price: 'Ghc 560',
+      ttl: 'My good product',
+
+    ),
+    AdMod(
+      image: 'images/6.jpg',
+      price: 'Ghc 560',
+      ttl: 'My good product',
+
+    ),
+    AdMod(
+      image: 'images/6.jpg',
+      price: 'Ghc 560',
+      ttl: 'My good product',
+
+    ), AdMod(
+      image: 'images/6.jpg',
+      price: 'Ghc 560',
+      ttl: 'My good product',
+
+    ),
+    AdMod(
+      image: 'images/6.jpg',
+      price: 'Ghc 560',
+      ttl: 'My good product',
+
+    ),
+    AdMod(
+      image: 'images/6.jpg',
+      price: 'Ghc 560',
+      ttl: 'My good product',
+
+    ),
+    AdMod(
+      image: 'images/6.jpg',
+      price: 'Ghc 560',
+      ttl: 'My good product',
+
+    ),
+    AdMod(
+      image: 'images/6.jpg',
+      price: 'Ghc 560',
+      ttl: 'My good product',
+
+    ),
+    AdMod(
+      image: 'images/6.jpg',
+      price: 'Ghc 560',
+      ttl: 'My good product',
+
+    ),
+    AdMod(
+      image: 'images/6.jpg',
+      price: 'Ghc 560',
+      ttl: 'My good product',
+
+    ), AdMod(
+      image: 'images/6.jpg',
+      price: 'Ghc 560',
+      ttl: 'My good product',
+
+    ),
+    AdMod(
+      image: 'images/6.jpg',
+      price: 'Ghc 560',
+      ttl: 'My good product',
+
+    ),
+
+
+
+
+  ];
+
+
+
+
 }

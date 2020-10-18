@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 
-import 'cedicartmod.dart';
+import 'ad_mod.dart';
 
 class AdElement extends StatefulWidget {
-  final CartModel cedicart_mod;
+  final AdMod adMod;
 
-  AdElement({Key key, this.cedicart_mod}) : super(key: key);
+  AdElement({Key key, this.adMod}) : super(key: key);
 
   @override
   _AdElementState createState() => _AdElementState();
 }
 
 class _AdElementState extends State<AdElement> {
-  CartModel model;
+  AdMod model;
   @override
   void initState() {
-    model = widget.cedicart_mod;
+    model = widget.adMod;
     super.initState();
   }
 
