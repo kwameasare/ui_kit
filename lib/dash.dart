@@ -12,6 +12,7 @@ class Dash extends StatefulWidget {
 class _DashState extends State<Dash> {
   @override
   Widget build(BuildContext context) {
+    var ww = MediaQuery.of(context).size.width;
     return Column(
       children: [
         Container(
@@ -22,17 +23,18 @@ class _DashState extends State<Dash> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Card(
-                  elevation: 30,
+                  elevation: 15,
+                  shadowColor: Colors.grey.shade50,
                   clipBehavior: Clip.antiAliasWithSaveLayer,
                   borderOnForeground: true,
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30)),
+                      borderRadius: BorderRadius.circular(8)),
                   child: Container(
                     alignment: Alignment.centerLeft,
-                    width: MediaQuery.of(context).size.width * 0.75,
+                    width: ww * 0.75,
                     margin: EdgeInsets.only(
-                        left: MediaQuery.of(context).size.width * 0.028,
-                        right: MediaQuery.of(context).size.width * 0.028),
+                      left: ww * 0.028,
+                    ),
                     height: 40,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(100)),
@@ -45,11 +47,16 @@ class _DashState extends State<Dash> {
                       // ]
                     ),
                     child: Padding(
-                      padding: EdgeInsets.only(left: 20, right: 15.0),
+                      padding: EdgeInsets.only(
+                        left: 20,
+                      ),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text('', style: TextStyle(color: Colors.grey)),
+                          Container(
+                              width: ww * .62,
+                              child: Text('Find Product',
+                                  style: TextStyle(color: Colors.grey))),
                           Icon(Icons.search, color: Colors.grey, size: 20)
                         ],
                       ),
@@ -58,23 +65,28 @@ class _DashState extends State<Dash> {
                 ),
               ],
             )),
-        Container(
-            child: CarouselSlider(
-          options: CarouselOptions(
-            height: 220.0,
-            autoPlay: true,
-            viewportFraction: 0.7,
-            autoPlayInterval: Duration(seconds: 3),
-            autoPlayAnimationDuration: Duration(milliseconds: 800),
-            autoPlayCurve: Curves.fastOutSlowIn,
-            enlargeCenterPage: true,
-          ),
-          items: AppData.adList
-              .map((post) => AdElement(
-                    adMod: post,
-                  ))
-              .toList(),
-        )),
+        Column(
+          children: [
+            Container(
+                child: CarouselSlider(
+              options: CarouselOptions(
+                height: 220.0,
+                autoPlay: true,
+                viewportFraction: 0.7,
+                autoPlayInterval: Duration(seconds: 3),
+                autoPlayAnimationDuration: Duration(milliseconds: 800),
+                autoPlayCurve: Curves.fastOutSlowIn,
+                enlargeCenterPage: true,
+              ),
+              items: AppData.adList
+                  .map((post) => AdElement(
+                        adMod: post,
+                      ))
+                  .toList(),
+            )),
+            Container()
+          ],
+        ),
       ],
     );
   }

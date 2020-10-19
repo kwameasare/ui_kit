@@ -1,12 +1,11 @@
-class AdMod {
+class CatMod {
   String ttl;
-  bool isSelected;
+
   String image;
   String price;
 
-  AdMod({
+  CatMod({
     this.ttl,
-    this.isSelected,
     this.price,
     this.image,
   });
