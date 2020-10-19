@@ -27,7 +27,7 @@ class _AdElementState extends State<AdElement> {
       height: 220,
       width: ww * .8,
       child: Card(
-        margin: EdgeInsets.only(bottom: 40, left: 5, right: 5),
+        margin: EdgeInsets.only(bottom: 40, left: 5, right: 5, top: 25),
         semanticContainer: true,
         elevation: 20,
         clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -40,11 +40,13 @@ class _AdElementState extends State<AdElement> {
           },
           child: Container(
               width: ww * .8,
-              height: 220,
+              height: 200,
               child: Stack(
+                fit: StackFit.expand,
                 children: [
                   Image.asset(
                     model.image,
+                    fit: BoxFit.cover,
                   ),
                 ],
               )),

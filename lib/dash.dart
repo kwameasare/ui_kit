@@ -52,22 +52,21 @@ class _DashState extends State<Dash> {
               ],
             )),
         Container(
-            margin: EdgeInsets.only(top: 30),
             child: CarouselSlider(
-              options: CarouselOptions(
-                height: 220.0,
-                autoPlay: true,
-                autoPlayInterval: Duration(seconds: 3),
-                autoPlayAnimationDuration: Duration(milliseconds: 800),
-                autoPlayCurve: Curves.fastOutSlowIn,
-                enlargeCenterPage: true,
-              ),
-              items: AppData.adList
-                  .map((post) => AdElement(
-                        adMod: post,
-                      ))
-                  .toList(),
-            )),
+          options: CarouselOptions(
+            height: 220.0,
+            autoPlay: true,
+            autoPlayInterval: Duration(seconds: 3),
+            autoPlayAnimationDuration: Duration(milliseconds: 800),
+            autoPlayCurve: Curves.fastOutSlowIn,
+            enlargeCenterPage: true,
+          ),
+          items: AppData.adList
+              .map((post) => AdElement(
+                    adMod: post,
+                  ))
+              .toList(),
+        )),
       ],
     );
   }
