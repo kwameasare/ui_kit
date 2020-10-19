@@ -19,33 +19,40 @@ class _DashState extends State<Dash> {
             padding: EdgeInsets.only(
                 top: MediaQuery.of(context).size.height * 0.001),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  alignment: Alignment.centerLeft,
-                  width: MediaQuery.of(context).size.width * 0.75,
-                  margin: EdgeInsets.only(
-                      left: MediaQuery.of(context).size.width * 0.028,
-                      right: MediaQuery.of(context).size.width * 0.028),
-                  height: 40,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(100)),
-                    color: Colors.white,
-                    // boxShadow: [
-                    //   BoxShadow(
-                    //       blurRadius: 6.0,
-                    //       color: Colors.grey.withOpacity(0.4),
-                    //       spreadRadius: 5.0),
-                    // ]
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 20, right: 15.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text('', style: TextStyle(color: Colors.grey)),
-                        Icon(Icons.search, color: Colors.grey, size: 20)
-                      ],
+                Card(
+                  elevation: 30,
+                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                  borderOnForeground: true,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30)),
+                  child: Container(
+                    alignment: Alignment.centerLeft,
+                    width: MediaQuery.of(context).size.width * 0.75,
+                    margin: EdgeInsets.only(
+                        left: MediaQuery.of(context).size.width * 0.028,
+                        right: MediaQuery.of(context).size.width * 0.028),
+                    height: 40,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(100)),
+                      color: Colors.white,
+                      // boxShadow: [
+                      //   BoxShadow(
+                      //       blurRadius: 6.0,
+                      //       color: Colors.grey.withOpacity(0.4),
+                      //       spreadRadius: 5.0),
+                      // ]
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 20, right: 15.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text('', style: TextStyle(color: Colors.grey)),
+                          Icon(Icons.search, color: Colors.grey, size: 20)
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -56,6 +63,7 @@ class _DashState extends State<Dash> {
           options: CarouselOptions(
             height: 220.0,
             autoPlay: true,
+            viewportFraction: 0.7,
             autoPlayInterval: Duration(seconds: 3),
             autoPlayAnimationDuration: Duration(milliseconds: 800),
             autoPlayCurve: Curves.fastOutSlowIn,

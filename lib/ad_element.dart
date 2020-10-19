@@ -25,11 +25,11 @@ class _AdElementState extends State<AdElement> {
     var ww = MediaQuery.of(context).size.width;
     return Container(
       height: 220,
-      width: ww * .8,
+      width: ww * .7,
       child: Card(
-        margin: EdgeInsets.only(bottom: 40, left: 5, right: 5, top: 25),
+        margin: EdgeInsets.only(bottom: 50, top: 25),
         semanticContainer: true,
-        elevation: 20,
+        elevation: 30,
         clipBehavior: Clip.antiAliasWithSaveLayer,
         borderOnForeground: true,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
@@ -39,7 +39,7 @@ class _AdElementState extends State<AdElement> {
             print('Card tapped.');
           },
           child: Container(
-              width: ww * .8,
+              width: ww * .6,
               height: 200,
               child: Stack(
                 fit: StackFit.expand,
