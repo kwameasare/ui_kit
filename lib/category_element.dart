@@ -4,7 +4,7 @@ import 'package:ui_kit/category_mod.dart';
 class CategoryElement extends StatefulWidget {
   final CatMod cMod;
 
-  const CategoryElement({Key key, this.cMod}) : super(key: key);
+  const CategoryElement(this.cMod);
   @override
   _CategoryElementState createState() => _CategoryElementState();
 }
@@ -32,26 +32,26 @@ class _CategoryElementState extends State<CategoryElement>
     return Container(
       height: 120,
       width: 80,
-      child: Card(
+      child: new Card(
         margin: EdgeInsets.only(bottom: 50, top: 25),
         semanticContainer: true,
-        c
+        color: model.isSelected ? Colors.blueAccent : Colors.transparent,
         elevation: 30,
         clipBehavior: Clip.antiAliasWithSaveLayer,
         borderOnForeground: true,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-        child: InkWell(
+        child: new InkWell(
           splashColor: Colors.blue.withAlpha(30),
           onTap: () {
             print('Card tapped.');
           },
-          child: Container(
+          child: new Container(
               width: 80,
               height: 120,
-              child: Stack(
+              child: new Stack(
                 fit: StackFit.expand,
                 children: [
-                  Container(
+                  new Container(
                     height: 50,
                     width: 50,
                     child: Image.asset(
@@ -59,6 +59,11 @@ class _CategoryElementState extends State<CategoryElement>
                       fit: BoxFit.cover,
                     ),
                   ),
+                  new Text(model.ttl,
+                      style: new TextStyle(
+                          color: model.isSelected ? Colors.white : Colors.black,
+                          //fontWeight: FontWeight.bold,
+                          fontSize: 18.0)),
                 ],
               )),
         ),

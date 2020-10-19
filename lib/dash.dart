@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:ui_kit/ad_element.dart';
+import 'package:ui_kit/category_element.dart';
 
 import 'appdata.dart';
 
@@ -84,7 +85,24 @@ class _DashState extends State<Dash> {
                       ))
                   .toList(),
             )),
-            Container()
+            Container(
+              height: 100,
+              child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (BuildContext context, int index) {
+                    return new InkWell(
+                        //highlightColor: Colors.red,
+                        splashColor: Colors.blueAccent,
+                        onTap: () {
+                          setState(() {
+                            AppData.catList.forEach(
+                                (element) => element.isSelected = false);
+                            AppData.catList[index].isSelected = true;
+                          });
+                        },
+                        child: new CategoryElement(AppData.catList[index]));
+                  }),
+            )
           ],
         ),
       ],

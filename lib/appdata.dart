@@ -1,3 +1,5 @@
+import 'package:ui_kit/category_mod.dart';
+
 import 'ad_mod.dart';
 import 'cedicartmod.dart';
 
@@ -100,6 +102,87 @@ class AppData {
     AdMod(
       image: 'images/ad4.png',
       price: 'Ghc 560',
+      ttl: 'My good product',
+    ),
+  ];
+
+  static List<CatMod> catList = [
+    CatMod(
+      image: 'images/crown.png',
+      price: 'Ghc 560',
+      isSelected: true,
+      ttl: 'My good product',
+    ),
+    CatMod(
+      image: 'images/crown.png',
+      price: 'Ghc 560',
+      isSelected: false,
+      ttl: 'My good product',
+    ),
+    CatMod(
+      image: 'images/crown.png',
+      price: 'Ghc 560',
+      isSelected: false,
+      ttl: 'My good product',
+    ),
+    CatMod(
+      image: 'images/crown.png',
+      price: 'Ghc 560',
+      isSelected: false,
+      ttl: 'My good product',
+    ),
+    CatMod(
+      image: 'images/crown.png',
+      price: 'Ghc 560',
+      isSelected: false,
+      ttl: 'My good product',
+    ),
+    CatMod(
+      image: 'images/crown.png',
+      price: 'Ghc 560',
+      isSelected: false,
+      ttl: 'My good product',
+    ),
+    CatMod(
+      image: 'images/crown.png',
+      price: 'Ghc 560',
+      isSelected: false,
+      ttl: 'My good product',
+    ),
+    CatMod(
+      image: 'images/crown.png',
+      price: 'Ghc 560',
+      isSelected: false,
+      ttl: 'My good product',
+    ),
+    CatMod(
+      image: 'images/crown.png',
+      price: 'Ghc 560',
+      isSelected: false,
+      ttl: 'My good product',
+    ),
+    CatMod(
+      image: 'images/crown.png',
+      price: 'Ghc 560',
+      isSelected: false,
+      ttl: 'My good product',
+    ),
+    CatMod(
+      image: 'images/crown.png',
+      price: 'Ghc 560',
+      isSelected: false,
+      ttl: 'My good product',
+    ),
+    CatMod(
+      image: 'images/crown.png',
+      price: 'Ghc 560',
+      isSelected: false,
+      ttl: 'My good product',
+    ),
+    CatMod(
+      image: 'images/crown.png',
+      price: 'Ghc 560',
+      isSelected: false,
       ttl: 'My good product',
     ),
   ];
